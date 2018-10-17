@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GroveOledDisplay", "GroveOledDisplay\GroveOledDisplay.vcxproj", "{32599BB6-74AA-451A-A708-ED98D15DBDA1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MT3620_Grove_Shield_Library", "..\..\MT3620_Grove_Shield_Library\MT3620_Grove_Shield_Library.vcxproj", "{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32599BB6-74AA-451A-A708-ED98D15DBDA1}.Debug|ARM.ActiveCfg = Debug|ARM
+		{32599BB6-74AA-451A-A708-ED98D15DBDA1}.Debug|ARM.Build.0 = Debug|ARM
+		{32599BB6-74AA-451A-A708-ED98D15DBDA1}.Release|ARM.ActiveCfg = Release|ARM
+		{32599BB6-74AA-451A-A708-ED98D15DBDA1}.Release|ARM.Build.0 = Release|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Debug|ARM.Build.0 = Debug|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Release|ARM.ActiveCfg = Release|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2249499-D0BB-43A6-8664-7B3FFF2583FB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Grove_4_Digital_Display_v", "Grove_4_Digital_Display_v\Grove_4_Digital_Display_v.vcxproj", "{768BEDC7-AACC-4558-A7A5-24742EF5D9F6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MT3620_Grove_Shield_Library", "..\..\MT3620_Grove_Shield_Library\MT3620_Grove_Shield_Library.vcxproj", "{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{768BEDC7-AACC-4558-A7A5-24742EF5D9F6}.Debug|ARM.ActiveCfg = Debug|ARM
+		{768BEDC7-AACC-4558-A7A5-24742EF5D9F6}.Debug|ARM.Build.0 = Debug|ARM
+		{768BEDC7-AACC-4558-A7A5-24742EF5D9F6}.Release|ARM.ActiveCfg = Release|ARM
+		{768BEDC7-AACC-4558-A7A5-24742EF5D9F6}.Release|ARM.Build.0 = Release|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Debug|ARM.Build.0 = Debug|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Release|ARM.ActiveCfg = Release|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C87F0785-B58C-4E7E-9AD4-5C54BB7A9AE4}
+	EndGlobalSection
+EndGlobal

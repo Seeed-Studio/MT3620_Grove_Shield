@@ -1,0 +1,14 @@
+{
+  "SchemaVersion": 1,
+  "Name" : "Grove_4_Digital_Display_v",
+  "ComponentId" : "ff387aca-8784-48ab-adb8-a7c2b2063cbd",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [],
+  "TargetApplicationRuntimeVersion": 1,
+  "Capabilities": {
+    "AllowedConnections": [],
+    "Gpio": [ 8, 9, 10, 15, 16, 17, 18, 19, 20, 12, 13, 0, 1, 4, 5, 57, 58, 11, 14, 48 ],
+    "Uart": [ "ISU0", "ISU3" ],
+    "WifiConfig": false
+  }
+}

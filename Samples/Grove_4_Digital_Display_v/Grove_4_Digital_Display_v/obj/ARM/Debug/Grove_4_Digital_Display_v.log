@@ -1,0 +1,39 @@
+﻿  Azure Sphere Utility version 2.0.2.45571
+  Copyright (C) Microsoft Corporation. All rights reserved.
+   
+  Start time (UTC): Wednesday, 17 October 2018 07:49:15 
+  verbose: Creating image. 
+  verbose: Azure Sphere application image written. 
+  verbose: Appending metadata. 
+  verbose: Wrote metadata:
+    Section: Identity
+      Image Type:        Applications
+  
+      Component UID:     ff387aca-8784-48ab-adb8-a7c2b2063cbd
+  
+      Image UID:         df00fd25-c111-4e9d-96fb-5c263ae138cd
+  
+    Section: Signature
+      Signing Type:      ECDsa256
+  
+      Cert:              a8d5cc6958f48710140d7a26160fc1cfc31f5df0
+  
+    Section: Debug
+      Name:              Grove_4_Digital_Display_v
+  
+      Built On (UTC):    10/17/2018 7:49:16 AM
+  
+      Built On (Local):  10/17/2018 3:49:16 PM
+  
+    Section: Temporary Image
+      Remove image at boot: False
+  
+      Under development: True
+  
+    Section: ABI Depends
+      Depends:           ApplicationRuntime@1
+  
+   
+  verbose: Packaging completed successfully. 
+  verbose: Output file is at: E:\workspace\MT3620_Grove_Shield_Library\Samples\Grove_4_Digital_Display_v\Grove_4_Digital_Display_v\bin\ARM\Debug\Grove_4_Digital_Display_v.imagepackage 
+  Command completed successfully in 00:00:00.6999915. 

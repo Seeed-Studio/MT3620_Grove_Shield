@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Temp_and_Humidity_SHT31", "Temp_and_Humidity_SHT31\Temp_and_Humidity_SHT31.vcxproj", "{E455FF0F-EA74-4E2C-9C8A-5DBA1268BE88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MT3620_Grove_Shield_Library", "..\..\MT3620_Grove_Shield_Library\MT3620_Grove_Shield_Library.vcxproj", "{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E455FF0F-EA74-4E2C-9C8A-5DBA1268BE88}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E455FF0F-EA74-4E2C-9C8A-5DBA1268BE88}.Debug|ARM.Build.0 = Debug|ARM
+		{E455FF0F-EA74-4E2C-9C8A-5DBA1268BE88}.Release|ARM.ActiveCfg = Release|ARM
+		{E455FF0F-EA74-4E2C-9C8A-5DBA1268BE88}.Release|ARM.Build.0 = Release|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Debug|ARM.Build.0 = Debug|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Release|ARM.ActiveCfg = Release|ARM
+		{A4F0A16D-B28D-4249-9B0A-EEEC5090F21D}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C871C66-7375-40D5-8E80-84BB7157DB05}
+	EndGlobalSection
+EndGlobal
