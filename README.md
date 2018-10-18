@@ -17,7 +17,7 @@ This is library for Azure Sphere MT3620 Grove Shield, the shield enhences Azure 
 
 There are some templates for MT3620, select __Blank Application for MT3620 RDB (Azure Sphere)__ to create a blank project, or if you want to use __Azure IoT Hub__ then select __Azure IoT Hub Sample for MT3620 RDB(Azure Sphere)__.
 
-4. Select __Blank Application for MT3620 RDB (Azure Sphere)__ and type a project name, select a project location then Right-Click __OK__.
+4. Select __Blank Application for MT3620 RDB (Azure Sphere)__ and type a project name, select a project location then click __OK__.
 
 ### Import MT3620_Grove_Shield_Library to the project
 
@@ -33,12 +33,12 @@ There are some templates for MT3620, select __Blank Application for MT3620 RDB (
 ```JSON
 "Capabilities": {
 	"AllowedConnections": [],
-	"Gpio": [ 8, 9, 10, 15, 16, 17, 18, 19, 20, 12, 13, 0, 4, 5, 57, 58, 11, 14, 48 ],
+	"Gpio": [ 8, 9, 10, 15, 16, 17, 18, 19, 20, 12, 13, 0, 1, 4, 5, 57, 58, 11, 14, 48 ],
 	"Uart": [ "ISU0", "ISU3" ],
 	"WifiConfig": false
 }
 ```
-9. Now you can edit main.c file in __Source Files__, include __Grove.h__ and __Sensor/xxx.h__ to drive the MT3620 Grove Shield.
+9. Now you can edit main.c file in __Source Files__, to include __Grove.h__ and __Sensor/xxx.h__ to drive the MT3620 Grove Shield.
 
 
 ### Some available header files
