@@ -15,7 +15,6 @@
     <ClCompile Include="HAL\GroveI2C.c" />
     <ClCompile Include="HAL\GroveShield.c" />
     <ClCompile Include="HAL\GroveUART.c" />
-    <ClCompile Include="parson.c" />
     <ClCompile Include="Sensors\Grove4DigitDisplay.c" />
     <ClCompile Include="Sensors\GroveAD7992.c" />
     <ClCompile Include="Sensors\GroveLEDButton.c" />
@@ -25,7 +24,6 @@
     <ClCompile Include="Sensors\GroveRotaryAngleSensor.c" />
     <ClCompile Include="Sensors\GroveTempHumiBaroBME280.c" />
     <ClCompile Include="Sensors\GroveTempHumiSHT31.c" />
-    <ClCompile Include="timer_utility.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="applibs_versions.h" />
@@ -35,7 +33,6 @@
     <ClInclude Include="HAL\GroveShield.h" />
     <ClInclude Include="HAL\GroveUART.h" />
     <ClInclude Include="mt3620_rdb.h" />
-    <ClInclude Include="parson.h" />
     <ClInclude Include="Sensors\Grove4DigitDisplay.h" />
     <ClInclude Include="Sensors\GroveAD7992.h" />
     <ClInclude Include="Sensors\GroveLEDButton.h" />
@@ -45,10 +42,6 @@
     <ClInclude Include="Sensors\GroveRotaryAngleSensor.h" />
     <ClInclude Include="Sensors\GroveTempHumiBaroBME280.h" />
     <ClInclude Include="Sensors\GroveTempHumiSHT31.h" />
-    <ClInclude Include="timer_utility.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app_manifest.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{a4f0a16d-b28d-4249-9b0a-eeec5090f21d}</ProjectGuid>
@@ -68,6 +61,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
     <ConfigurationType>StaticLibrary</ConfigurationType>
+    <TargetSysroot>1</TargetSysroot>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>

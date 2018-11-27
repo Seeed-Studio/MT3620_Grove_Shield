@@ -11,16 +11,16 @@
 
 void GroveOledDisplay_Init(int i2cFd, uint8_t IC);
 
-void setNormalDisplay();
-void setInverseDisplay();
+void setNormalDisplay(void);
+void setInverseDisplay(void);
 
 void setGrayLevel(unsigned char grayLevel);
 
-void setVerticalMode();
-void setHorizontalMode();
+void setVerticalMode(void);
+void setHorizontalMode(void);
 
 void setTextXY(unsigned char Row, unsigned char Column);
-void clearDisplay();
+void clearDisplay(void);
 void setContrastLevel(unsigned char ContrastLevel);
 void putChar(unsigned char c);
 void putString(const char *String);
@@ -29,5 +29,5 @@ unsigned char putNumber(long n);
 void drawBitmap(const unsigned char *bitmaparray, int bytes);
 
 void setHorizontalScrollProperties(bool direction, unsigned char startRow, unsigned char endRow, unsigned char startColumn, unsigned char endColumn, unsigned char scrollSpeed);
-void activateScroll();
-void deactivateScroll();
+void activateScroll(void);
+void deactivateScroll(void);

@@ -15,8 +15,6 @@
     <ClCompile Include="HAL\GroveUART.c">
       <Filter>HAL</Filter>
     </ClCompile>
-    <ClCompile Include="parson.c" />
-    <ClCompile Include="timer_utility.c" />
     <ClCompile Include="HAL\GroveI2C.c">
       <Filter>HAL</Filter>
     </ClCompile>
@@ -64,8 +62,6 @@
     <ClInclude Include="applibs_versions.h" />
     <ClInclude Include="Grove.h" />
     <ClInclude Include="mt3620_rdb.h" />
-    <ClInclude Include="parson.h" />
-    <ClInclude Include="timer_utility.h" />
     <ClInclude Include="HAL\GroveShield.h">
       <Filter>HAL</Filter>
     </ClInclude>
@@ -99,8 +95,5 @@
     <ClInclude Include="Sensors\GroveLightSensor.h">
       <Filter>Sensors</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app_manifest.json" />
   </ItemGroup>
 </Project>

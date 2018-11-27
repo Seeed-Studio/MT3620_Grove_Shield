@@ -27,7 +27,7 @@ There are some templates for MT3620, select __Blank Application for MT3620 RDB (
 4. Now MT3620_Grove_Shield_Library has been added to the solution.
 5. Right-Click the project name of your application, select __Properties > C/C++ > General > Additional Include Directories__
 6. Click the __down arraw >  Edit... > New Line__ icons, add the path of  __MT3620_Grove_Shield_Library__ to the blank item, click __Select Folder__ > __OK__ > __OK__
-7. Go to the application project Right-Click __References__ > __Add References__, select __Projets__, click the check box of __MT3620_Grove_Shield_Library__, then click __OK__
+7. Go to the application project Right-Click __References__ > __Add References__, select __Projects__, click the check box of __MT3620_Grove_Shield_Library__, then click __OK__
 8. Select __app_manifest.json__ in the application project, add the below attributions, so that we can use the peripherals that MT3620 Grove Shield would use.
 
 ```JSON

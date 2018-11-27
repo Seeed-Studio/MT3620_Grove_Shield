@@ -253,7 +253,7 @@ void setContrastLevel(unsigned char ContrastLevel)
 	sendCommand(ContrastLevel);
 }
 
-void setHorizontalMode()
+void setHorizontalMode(void)
 {
 	if (Drive_IC == SSD1327)
 	{
@@ -277,7 +277,7 @@ void setHorizontalMode()
 	}
 }
 
-void setVerticalMode()
+void setVerticalMode(void)
 {
 	if (Drive_IC == SSD1327)
 	{
@@ -322,7 +322,7 @@ void setTextXY(unsigned char Row, unsigned char Column)
 	}
 }
 
-void clearDisplay()
+void clearDisplay(void)
 {
 	unsigned char i, j;
 
@@ -540,22 +540,22 @@ Use the following defines for 'scrollSpeed' :
 
 }
 
-void activateScroll()
+void activateScroll(void)
 {
 	sendCommand(SeeedGrayOLED_Activate_Scroll_Cmd);
 }
 
-void deactivateScroll()
+void deactivateScroll(void)
 {
 	sendCommand(SeeedGrayOLED_Dectivate_Scroll_Cmd);
 }
 
-void setNormalDisplay()
+void setNormalDisplay(void)
 {
 	sendCommand(SeeedGrayOLED_Normal_Display_Cmd);
 }
 
-void setInverseDisplay()
+void setInverseDisplay(void)
 {
 	sendCommand(SeeedGrayOLED_Inverse_Display_Cmd);
 }
