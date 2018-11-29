@@ -28,7 +28,17 @@ There are some templates for MT3620, select __Blank Application for MT3620 RDB (
 5. Right-Click the project name of your application, select __Properties > C/C++ > General > Additional Include Directories__
 6. Click the __down arraw >  Edit... > New Line__ icons, add the path of  __MT3620_Grove_Shield_Library__ to the blank item, click __Select Folder__ > __OK__ > __OK__
 7. Go to the application project Right-Click __References__ > __Add References__, select __Projects__, click the check box of __MT3620_Grove_Shield_Library__, then click __OK__
-8. Select __app_manifest.json__ in the application project, add the below attributions, so that we can use the peripherals that MT3620 Grove Shield would use.
+8. Add the Grove library path to your project 
+before you can utilize the Grove libraries in the new project you must update the project properties to include the path to the libraries.
+- Right-Click the solution title In __Solution Explorer__ window on the right side
+- Select __Properties__ at the bottom of the new dialog
+- The project Properties Page will open
+- In the left most pane, select __Configuration Properties --> C/C++ --> General__
+- In the right side panel, select the __Additional Include Directories__ line
+- On that same line click on the __down arrow__ in the right most column, select __edit__
+- Add the path where you copied the MT3620_Grove_Shield-master files on your local drive
+- Click __OK__, then __Apply__
+9. Select __app_manifest.json__ in the application project, add the below attributions, so that we can use the peripherals that MT3620 Grove Shield would use.
 
 ```JSON
 "Capabilities": {
@@ -38,8 +48,7 @@ There are some templates for MT3620, select __Blank Application for MT3620 RDB (
 	"WifiConfig": false
 }
 ```
-9. Now you can edit main.c file in __Source Files__, to include __Grove.h__ and __Sensor/xxx.h__ to drive the MT3620 Grove Shield.
-
+10. Now you can edit main.c file in __Source Files__, to include __Grove.h__ and __Sensor/xxx.h__ to drive the MT3620 Grove Shield.
 
 ### Some available header files
 
@@ -54,7 +63,6 @@ There are some templates for MT3620, select __Blank Application for MT3620 RDB (
 - Sensors/GroveRotaryAngleSensor.h
 - Sensors/GroveLEDButton.h
 - Sensors/GroveLightSensor.h
-- 
 
 ### Usage of the library, see Example - Temp and Huminidy SHT31
 
