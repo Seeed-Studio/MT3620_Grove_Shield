@@ -212,6 +212,7 @@ int main(int argc, char *argv[])
 		// Word display
 		clearDisplay();
 		setNormalDisplay();
+		setVerticalMode();
 
 		for (uint8_t i = 0; i < 16; i++)
 		{
