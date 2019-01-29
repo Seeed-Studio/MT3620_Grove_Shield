@@ -306,19 +306,9 @@ void setTextXY(unsigned char Row, unsigned char Column)
 	}
 	else if (Drive_IC == SH1107G)
 	{
-		uint8_t col_l;
-
-		if (Column % 2 == 0)
-		{
-			col_l = 0x00;
-		}
-		else
-		{
-			col_l = 0x08;
-		}			 
-		sendCommand((uint8_t)(0xb0 + Row));
-		sendCommand(col_l);
-		sendCommand((uint8_t)(0x10 + (Column / 2)));
+		sendCommand(0xb0 + (Row & 0x0F));  // set page/row
+		sendCommand(0x10 + ((Column >> 4) & 0x07));  // set column high 3 bytex
+		sendCommand(Column & 0x0F);  // set column low 4 byte
 	}
 }
 
