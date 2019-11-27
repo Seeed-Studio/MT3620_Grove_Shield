@@ -13,6 +13,8 @@
 
 #define CMD_SOFT_RESET		(0x30a2)
 #define CMD_SINGLE_HIGH		(0x2400)
+#define CMD_HEATER_ENABLE	(0x306d)
+#define CMD_HEATER_DISABLE	(0x3066)
 
 typedef struct
 {
@@ -89,6 +91,22 @@ void GroveTempHumiSHT31_Read(void* inst)
 
 	this->Temperature = (float)ST * 175 / 0xffff - 45;
 	this->Humidity = (float)SRH * 100 / 0xffff;
+}
+
+void GroveTempHumiSHT31_EnableHeater(void* inst)
+{
+	GroveTempHumiSHT31Instance* this = (GroveTempHumiSHT31Instance*)inst;
+
+	SendCommand(this, CMD_HEATER_ENABLE);
+	usleep(20000);
+}
+
+void GroveTempHumiSHT31_DisableHeater(void* inst)
+{
+	GroveTempHumiSHT31Instance* this = (GroveTempHumiSHT31Instance*)inst;
+
+	SendCommand(this, CMD_HEATER_DISABLE);
+	usleep(20000);
 }
 
 float GroveTempHumiSHT31_GetTemperature(void* inst)

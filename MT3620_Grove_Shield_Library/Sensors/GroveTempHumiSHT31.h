@@ -5,5 +5,7 @@
 #pragma once
 void* GroveTempHumiSHT31_Open(int i2cFd);
 void GroveTempHumiSHT31_Read(void* inst);
+void GroveTempHumiSHT31_EnableHeater(void* inst);
+void GroveTempHumiSHT31_DisableHeater(void* inst);
 float GroveTempHumiSHT31_GetTemperature(void* inst);
 float GroveTempHumiSHT31_GetHumidity(void* inst);
