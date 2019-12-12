@@ -4,14 +4,12 @@
 #include <string.h>
 #include <time.h>
 
-// applibs_versions.h defines the API struct versions to use for applibs APIs.
-#include "applibs_versions.h"
 #include <applibs/log.h>
+#include <applibs/gpio.h>
 
-#include "mt3620_rdb.h"
+#include "../../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../../MT3620_Grove_Shield_Library/Sensors/Grove4DigitDisplay.h"
 
-#include "Grove.h"
-#include "Sensors/Grove4DigitDisplay.h"
 
 
 static volatile sig_atomic_t terminationRequested = false;
@@ -48,7 +46,7 @@ int main(int argc, char *argv[])
 
 	// Main loop
 	while (!terminationRequested) {
-		// Disaplay increasing number
+		// Display increasing number
 		Grove4DigitDisplay_DisplayValue(dev, number++);
 		usleep(1000000);
 	}

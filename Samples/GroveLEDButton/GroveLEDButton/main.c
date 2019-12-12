@@ -4,14 +4,12 @@
 #include <string.h>
 #include <time.h>
 
-// applibs_versions.h defines the API struct versions to use for applibs APIs.
-#include "applibs_versions.h"
 #include <applibs/log.h>
+#include <applibs/gpio.h>
 
-#include "mt3620_rdb.h"
+#include "../../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveLEDButton.h"
 
-#include "Grove.h"
-#include "Sensors/GroveLEDButton.h"
 
 // This C application for the MT3620 Reference Development Board (Azure Sphere)
 // outputs a string every second to Visual Studio's Device Output window

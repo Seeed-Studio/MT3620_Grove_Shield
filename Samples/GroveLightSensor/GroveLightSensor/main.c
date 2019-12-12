@@ -4,15 +4,13 @@
 #include <string.h>
 #include <time.h>
 
-// applibs_versions.h defines the API struct versions to use for applibs APIs.
-#include "applibs_versions.h"
 #include <applibs/log.h>
+#include <applibs/gpio.h>
 
-#include "mt3620_rdb.h"
+#include "../../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveLightSensor.h"
+#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveAD7992.h"
 
-#include "Grove.h"
-#include "Sensors/GroveLightSensor.h"
-#include "Sensors/GroveAD7992.h"
 
 // This C application for the MT3620 Reference Development Board (Azure Sphere)
 // outputs a string every second to Visual Studio's Device Output window
@@ -46,7 +44,7 @@ int main(int argc, char *argv[])
 
 	// Initialize Grove Shield
 	int i2cFd;
-	GroveShield_Initialize(&i2cFd, 9600);
+	GroveShield_Initialize(&i2cFd, 115200);
 
 	// Initialize Light Sensor
 	void *light = GroveLightSensor_Init(i2cFd, 0);
