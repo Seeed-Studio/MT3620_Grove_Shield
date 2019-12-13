@@ -7,10 +7,8 @@
 #include <applibs/log.h>
 #include <applibs/gpio.h>
 
-#include "../../../MT3620_Grove_Shield_Library/Grove.h"
-//#include "Grove.h"
-//#include "Sensors/GroveOledDisplay96x96.h"
-#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveOledDisplay96x96.h"
+#include "../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../MT3620_Grove_Shield_Library/Sensors/GroveOledDisplay96x96.h"
 
 // This C application for the MT3620 Reference Development Board (Azure Sphere)
 // outputs a string every second to Visual Studio's Device Output window

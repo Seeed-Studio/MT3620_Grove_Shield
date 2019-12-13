@@ -7,8 +7,8 @@
 #include <applibs/log.h>
 #include <applibs/gpio.h>
 
-#include "../../../MT3620_Grove_Shield_Library/Grove.h"
-#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveRotaryAngleSensor.h"
+#include "../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../MT3620_Grove_Shield_Library/Sensors/GroveLEDButton.h"
 
 
 // This C application for the MT3620 Reference Development Board (Azure Sphere)
@@ -33,6 +33,7 @@ static void TerminationHandler(int signalNumber)
 /// </summary>
 int main(int argc, char *argv[])
 {
+	static GPIO_Value_Type btn_sta, last_btn_sta;
     Log_Debug("Application starting\n");
 
     // Register a SIGTERM handler for termination requests
@@ -41,18 +42,26 @@ int main(int argc, char *argv[])
     action.sa_handler = TerminationHandler;
     sigaction(SIGTERM, &action, NULL);
 
-	// Initialize Grove Shield
-	int i2cFd;
-	GroveShield_Initialize(&i2cFd, 9600);
-
-	void* rotary = GroveRotaryAngleSensor_Init(i2cFd, 0);
-	
+	void *btn = GroveLEDButton_Init(1, 0);
+	last_btn_sta = GroveLEDButton_GetBtnState(btn);
 
     // Main loop
-    const struct timespec sleepTime = {1, 0};
+    const struct timespec sleepTime = {0, 1000};
     while (!terminationRequested) {
-		float occupy = 1.0f - GroveRotaryAngleSensor_Read(rotary);
-        Log_Debug("Angle Value %.2f\n", occupy);
+
+		btn_sta = GroveLEDButton_GetBtnState(btn);
+		
+		if (btn_sta != last_btn_sta) {
+			if (btn_sta == 0) {
+				GroveLEDButton_LedOn(btn);
+				Log_Debug("Button pressed.\n");
+			}
+			else {
+				GroveLEDButton_LedOff(btn);
+				Log_Debug("Button released.\n");
+			}
+		}
+		last_btn_sta = btn_sta;
 
         nanosleep(&sleepTime, NULL);
     }

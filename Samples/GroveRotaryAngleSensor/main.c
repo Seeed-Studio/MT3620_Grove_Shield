@@ -7,9 +7,8 @@
 #include <applibs/log.h>
 #include <applibs/gpio.h>
 
-#include "../../../MT3620_Grove_Shield_Library/Grove.h"
-#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveLightSensor.h"
-#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveAD7992.h"
+#include "../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../MT3620_Grove_Shield_Library/Sensors/GroveRotaryAngleSensor.h"
 
 
 // This C application for the MT3620 Reference Development Board (Azure Sphere)
@@ -44,17 +43,16 @@ int main(int argc, char *argv[])
 
 	// Initialize Grove Shield
 	int i2cFd;
-	GroveShield_Initialize(&i2cFd, 115200);
+	GroveShield_Initialize(&i2cFd, 9600);
 
-	// Initialize Light Sensor
-	void *light = GroveLightSensor_Init(i2cFd, 0);
+	void* rotary = GroveRotaryAngleSensor_Init(i2cFd, 0);
+	
 
     // Main loop
     const struct timespec sleepTime = {1, 0};
     while (!terminationRequested) {
-		float value = GroveLightSensor_Read(light);
-		value = GroveAD7992_ConvertToMillisVolt(value);
-        Log_Debug("Light value %dmV\n", (uint16_t)value);
+		float occupy = 1.0f - GroveRotaryAngleSensor_Read(rotary);
+        Log_Debug("Angle Value %.2f\n", occupy);
 
         nanosleep(&sleepTime, NULL);
     }

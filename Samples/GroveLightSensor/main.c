@@ -7,8 +7,10 @@
 #include <applibs/log.h>
 #include <applibs/gpio.h>
 
-#include "../../../MT3620_Grove_Shield_Library/Grove.h"
-#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveRelay.h"
+#include "../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../MT3620_Grove_Shield_Library/Sensors/GroveLightSensor.h"
+#include "../../MT3620_Grove_Shield_Library/Sensors/GroveAD7992.h"
+
 
 // This C application for the MT3620 Reference Development Board (Azure Sphere)
 // outputs a string every second to Visual Studio's Device Output window
@@ -32,8 +34,6 @@ static void TerminationHandler(int signalNumber)
 /// </summary>
 int main(int argc, char *argv[])
 {
-    static bool state = true;
-
     Log_Debug("Application starting\n");
 
     // Register a SIGTERM handler for termination requests
@@ -42,21 +42,20 @@ int main(int argc, char *argv[])
     action.sa_handler = TerminationHandler;
     sigaction(SIGTERM, &action, NULL);
 
-    void *relay = GroveRelay_Open(0);
+	// Initialize Grove Shield
+	int i2cFd;
+	GroveShield_Initialize(&i2cFd, 115200);
+
+	// Initialize Light Sensor
+	void *light = GroveLightSensor_Init(i2cFd, 0);
 
     // Main loop
-    const struct timespec sleepTime = {2, 0};
-    while (!terminationRequested) {       
-        if(state) {
-            GroveRelay_On(relay);
-			Log_Debug("Relay on\n");
-            
-        } else {
-            GroveRelay_Off(relay);
-			Log_Debug("Relay off\n");
-        }        
-        state = !state;
-        
+    const struct timespec sleepTime = {1, 0};
+    while (!terminationRequested) {
+		float value = GroveLightSensor_Read(light);
+		value = GroveAD7992_ConvertToMillisVolt(value);
+        Log_Debug("Light value %dmV\n", (uint16_t)value);
+
         nanosleep(&sleepTime, NULL);
     }
 

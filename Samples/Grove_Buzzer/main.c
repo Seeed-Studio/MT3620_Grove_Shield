@@ -7,9 +7,8 @@
 #include <applibs/log.h>
 #include <applibs/gpio.h>
 
-#include "../../../MT3620_Grove_Shield_Library/Grove.h"
-#include "../../../MT3620_Grove_Shield_Library/Sensors/GroveLEDButton.h"
-
+#include "../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../MT3620_Grove_Shield_Library/Sensors/GroveRelay.h"
 
 // This C application for the MT3620 Reference Development Board (Azure Sphere)
 // outputs a string every second to Visual Studio's Device Output window
@@ -33,7 +32,8 @@ static void TerminationHandler(int signalNumber)
 /// </summary>
 int main(int argc, char *argv[])
 {
-	static GPIO_Value_Type btn_sta, last_btn_sta;
+    static bool state = true;
+
     Log_Debug("Application starting\n");
 
     // Register a SIGTERM handler for termination requests
@@ -42,27 +42,21 @@ int main(int argc, char *argv[])
     action.sa_handler = TerminationHandler;
     sigaction(SIGTERM, &action, NULL);
 
-	void *btn = GroveLEDButton_Init(1, 0);
-	last_btn_sta = GroveLEDButton_GetBtnState(btn);
+    void *relay = GroveRelay_Open(0);
 
     // Main loop
-    const struct timespec sleepTime = {0, 1000};
-    while (!terminationRequested) {
-
-		btn_sta = GroveLEDButton_GetBtnState(btn);
-		
-		if (btn_sta != last_btn_sta) {
-			if (btn_sta == 0) {
-				GroveLEDButton_LedOn(btn);
-				Log_Debug("Button pressed.\n");
-			}
-			else {
-				GroveLEDButton_LedOff(btn);
-				Log_Debug("Button released.\n");
-			}
-		}
-		last_btn_sta = btn_sta;
-
+    const struct timespec sleepTime = {2, 0};
+    while (!terminationRequested) {       
+        if(state) {
+            GroveRelay_On(relay);
+			Log_Debug("Relay on\n");
+            
+        } else {
+            GroveRelay_Off(relay);
+			Log_Debug("Relay off\n");
+        }        
+        state = !state;
+        
         nanosleep(&sleepTime, NULL);
     }
 

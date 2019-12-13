@@ -7,8 +7,8 @@
 #include <applibs/log.h>
 #include <applibs/gpio.h>
 
-#include "../../../MT3620_Grove_Shield_Library/Grove.h"
-#include "../../../MT3620_Grove_Shield_Library/Sensors/Grove4DigitDisplay.h"
+#include "../../MT3620_Grove_Shield_Library/Grove.h"
+#include "../../MT3620_Grove_Shield_Library/Sensors/Grove4DigitDisplay.h"
 
 
 
