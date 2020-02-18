@@ -25,6 +25,18 @@ Select __app_manifest.json__ in the application project, add the below attributi
 }
 ```
 
+When using a hardware definition file, you must use an identifier for __app_manifest.json__.
+
+```JSON
+"Capabilities": {
+	"Gpio": [ "$MT3620_GPIO8", "$MT3620_GPIO9", "$MT3620_GPIO10", "$MT3620_GPIO15", "$MT3620_GPIO16", "$MT3620_GPIO17", "$MT3620_GPIO18", "$MT3620_GPIO19", "$MT3620_GPIO20", "$MT3620_GPIO12", "$MT3620_GPIO13", "$MT3620_GPIO0", "$MT3620_GPIO1", "$MT3620_GPIO4", "$MT3620_GPIO5", "$MT3620_GPIO57", "$MT3620_GPIO58", "$MT3620_GPIO11", "$MT3620_GPIO14", "$MT3620_GPIO48" ],
+	"Uart": [ "$MT3620_ISU0_UART", "$MT3620_ISU3_UART" ],
+	"AllowedApplicationConnections": []
+}
+```
+
+[Here](https://docs.microsoft.com/en-us/azure-sphere/app-development/manage-hardware-dependencies) for details of the hardware definition file.
+
 ## Some available header files
 
 - Grove.h
