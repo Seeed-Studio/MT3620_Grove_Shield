@@ -306,9 +306,9 @@ void setTextXY(unsigned char Row, unsigned char Column)
 	}
 	else if (Drive_IC == SH1107G)
 	{
-		sendCommand(0xb0 + (Row & 0x0F));  // set page/row
-		sendCommand(0x10 + ((Column >> 4) & 0x07));  // set column high 3 bytex
-		sendCommand(Column & 0x0F);  // set column low 4 byte
+		sendCommand((uint8_t)(0xb0 + (Row & 0x0F)));			// set page/row
+		sendCommand((uint8_t)(0x10 + ((Column >> 4) & 0x07)));	// set column high 3 bytex
+		sendCommand(Column & 0x0F);								// set column low 4 byte
 	}
 }
 
@@ -362,9 +362,10 @@ void putChar(unsigned char C)
 				char c = 0x00;
 				char bit1 = (BasicFont[C - 32][i] >> j) & 0x01;
 				char bit2 = (BasicFont[C - 32][i + 1] >> j) & 0x01;
+
 				// Each bit is changed to a nibble
-				c |= (bit1 == 1) ? grayH : 0x00;
-				c |= (bit2 == 1) ? grayL : 0x00;
+				c = (char)(c | (bit1 ? grayH : 0x00));
+				c = (char)(c | (bit2 ? grayL : 0x00));
 
 				sendData(c);
 			}
@@ -411,14 +412,14 @@ unsigned char putNumber(long long_num)
 
 	while (long_num > 0)
 	{
-		char_buffer[i++] = long_num % 10;
+		char_buffer[i++] = (unsigned char)(long_num % 10);
 		long_num /= 10;
 	}
 
-	f = f + i;
+	f = (unsigned char)(f + i);
 	for (; i > 0; i--)
 	{
-		putChar('0' + char_buffer[i - 1]);
+		putChar((unsigned char)('0' + char_buffer[i - 1]));
 	}
 	return f;
 
@@ -445,9 +446,9 @@ void drawBitmap(const unsigned char *bitmaparray, int bytes)
 				char bit2 = (uint8_t)(bitmaparray[i] << (j + 1) & 0x80);
 
 				// Each bit is changed to a nibble
-				c |= (bit1) ? grayH : 0x00;
-				// Each bit is changed to a nibble
-				c |= (bit2) ? grayL : 0x00;
+				c = (char)(c | (bit1 ? grayH : 0x00));
+				c = (char)(c | (bit2 ? grayL : 0x00));
+
 				sendData(c);
 			}
 		}
@@ -472,7 +473,7 @@ void drawBitmap(const unsigned char *bitmaparray, int bytes)
 			char tmp = 0x00;
 			for (int b = 0; b < 8; b++)
 			{
-				tmp |= ((bits >> (7 - b)) & 0x01) << b;
+				tmp = (char)(tmp | (((bits >> (7 - b)) & 0x01) << b));
 			}
 			sendData(tmp);
 			// delay(10);
@@ -482,7 +483,7 @@ void drawBitmap(const unsigned char *bitmaparray, int bytes)
 				column_l++;
 				if (column_l >= 16) {
 					column_l = 0x00;
-					column_h += 0x01;
+					column_h = (uint8_t)(column_h + 0x01);
 				}
 			}
 		}
