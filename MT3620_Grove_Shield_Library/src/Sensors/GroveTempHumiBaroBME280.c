@@ -1,7 +1,7 @@
-#include "GroveTempHumiBaroBME280.h"
+#include "Sensors/GroveTempHumiBaroBME280.h"
 #include <stdlib.h>
 #include <math.h>
-#include "../HAL/GroveI2C.h"
+#include "HAL/GroveI2C.h"
 
 #define BME280_ADDRESS				(0x76 << 1)
 

@@ -1,14 +1,11 @@
+#include "Sensors/Grove4DigitDisplay.h"
 #include <unistd.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-
 #include <applibs/gpio.h>
-
-#include "Grove4DigitDisplay.h"
-#include "../Common/Delay.h"
-
+#include "Common/Delay.h"
 
 static bool _clockpoint = false;
 

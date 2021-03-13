@@ -1,10 +1,9 @@
-#include "GroveAD7992.h"
+#include "Sensors/GroveAD7992.h"
 #include <stdint.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../HAL/GroveI2C.h"
-
 #include <applibs/gpio.h>
+#include "HAL/GroveI2C.h"
 
 #define AD7992_ADDRESS					(0x20 << 1)
 

@@ -3,7 +3,7 @@
 //WIKI_URL          http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BME280/
 
 #pragma once
-#include "../applibs_versions.h"
+
 void* GroveTempHumiBaroBME280_Open(int i2cFd);
 void GroveTempHumiBaroBME280_Read(void* inst);
 float GroveTempHumiBaroBME280_GetTemperature(void* inst);

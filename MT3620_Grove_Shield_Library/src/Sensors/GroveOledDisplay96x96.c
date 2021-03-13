@@ -2,17 +2,13 @@
 Grove OLED Display 96x96 v2.0
 */
 
+#include "Sensors/GroveOledDisplay96x96.h"
 #include <unistd.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-
-#include "GroveOledDisplay96x96.h"
-
-#include "../HAL/GroveI2C.h"
-
-
+#include "HAL/GroveI2C.h"
 
 #define SH1107G  1
 #define SSD1327  2

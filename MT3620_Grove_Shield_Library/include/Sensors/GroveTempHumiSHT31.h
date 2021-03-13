@@ -3,6 +3,7 @@
 //WIKI_URL          http://wiki.seeedstudio.com/Grove-TempAndHumi_Sensor-SHT31/
 
 #pragma once
+
 void* GroveTempHumiSHT31_Open(int i2cFd);
 void GroveTempHumiSHT31_Read(void* inst);
 void GroveTempHumiSHT31_EnableHeater(void* inst);

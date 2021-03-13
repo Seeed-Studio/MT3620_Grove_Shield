@@ -1,10 +1,7 @@
+#include "Sensors/GroveLightSensor.h"
 #include <stdlib.h>
-
 #include <applibs/gpio.h>
-
-#include "GroveLightSensor.h"
-#include "GroveAD7992.h"
-
+#include "Sensors/GroveAD7992.h"
 
 typedef struct
 {

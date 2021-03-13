@@ -3,8 +3,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "../applibs_versions.h"
-
 #define I2C_OK								0xF0
 #define I2C_NACK_ON_ADDRESS		0xF1
 #define I2C_NACK_ON_DATA			0xF2

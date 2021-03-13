@@ -1,14 +1,11 @@
-#include "GroveShield.h"
-#include "GroveUART.h"
-#include "GroveI2C.h"
-#include "../Common/Delay.h"
-
-#include <applibs/log.h>
+#include "HAL/GroveShield.h"
 #include <unistd.h>
 #include <string.h>
-
-#include "../mt3620_rdb.h"
-
+#include <applibs/log.h>
+#include "mt3620_rdb.h"
+#include "HAL/GroveUART.h"
+#include "HAL/GroveI2C.h"
+#include "Common/Delay.h"
 
 /**
 	Set bauud rate for SC18IM700

@@ -1,8 +1,7 @@
-#include "GroveUART.h"
+#include "HAL/GroveUART.h"
 #include <unistd.h>
 #include <stdint.h>
 #include <stdbool.h>
-
 #include <applibs/uart.h>
 
 int GroveUART_Open(UART_Id id, UART_BaudRate_Type baudRate)

@@ -1,6 +1,5 @@
-#include "GroveRelay.h"
+#include "Sensors/GroveRelay.h"
 #include <stdlib.h>
-
 #include <applibs/gpio.h>
 
 typedef struct

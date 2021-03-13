@@ -1,7 +1,6 @@
+#include "Sensors/GroveLEDButton.h"
 #include <stdlib.h>
 #include <applibs/gpio.h>
-
-#include "GroveLEDButton.h"
 
 typedef struct
 {

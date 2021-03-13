@@ -1,9 +1,10 @@
 //GROVE_NAME        "Grove - OLED Display 1.12'' V2"
 //SKU               101020132
 //WIKI_URL          http://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/
+
 #pragma once
 
-#include "../applibs_versions.h"
+#include <stdbool.h>
 #include <applibs/gpio.h>
 
 #define SH1107G  1

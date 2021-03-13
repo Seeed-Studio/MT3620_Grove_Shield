@@ -1,11 +1,10 @@
-#include "GroveTempHumiSHT31.h"
+#include "Sensors/GroveTempHumiSHT31.h"
 #include <stdint.h>
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-#include "../HAL/GroveI2C.h"
-#include "../Common/Delay.h"
-
+#include "HAL/GroveI2C.h"
+#include "Common/Delay.h"
 
 #define SHT31_ADDRESS		(0x44 << 1)
 

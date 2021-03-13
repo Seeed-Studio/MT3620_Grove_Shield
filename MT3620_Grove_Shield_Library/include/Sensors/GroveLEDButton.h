@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include <applibs/gpio.h>
+
 void *GroveLEDButton_Init(GPIO_Id btn, GPIO_Id led);
 GPIO_Value_Type GroveLEDButton_GetBtnState(void *inst);
 void GroveLEDButton_LedOn(void *inst);

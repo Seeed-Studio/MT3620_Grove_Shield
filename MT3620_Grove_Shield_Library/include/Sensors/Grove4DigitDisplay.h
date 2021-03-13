@@ -4,9 +4,8 @@
 
 #pragma once
 
-#include "../applibs_versions.h"
-#include <applibs/gpio.h>
 #include <stdbool.h>
+#include <applibs/gpio.h>
 
 void* Grove4DigitDisplay_Open(GPIO_Id pin_clk, GPIO_Id pin_dio);
 void Grove4DigitDisplay_DisplayOneSegment(void* inst, int bitAddr, int dispData);

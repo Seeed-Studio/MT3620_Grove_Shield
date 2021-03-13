@@ -1,9 +1,9 @@
-#include "GroveI2C.h"
+#include "HAL/GroveI2C.h"
 #include <unistd.h>
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
-#include "GroveUART.h"
+#include "HAL/GroveUART.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 // SC18IM700

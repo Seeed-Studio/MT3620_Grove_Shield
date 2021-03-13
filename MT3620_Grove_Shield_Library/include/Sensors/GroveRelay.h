@@ -4,7 +4,6 @@
 
 #pragma once
 
-#include "../applibs_versions.h"
 #include <applibs/gpio.h>
 
 void* GroveRelay_Open(GPIO_Id pinId);

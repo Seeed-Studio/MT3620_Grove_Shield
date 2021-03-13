@@ -1,8 +1,7 @@
+#include "Sensors/GroveRotaryAngleSensor.h"
 #include <stdlib.h>
-
-#include "GroveRotaryAngleSensor.h"
-#include "GroveAD7992.h"
 #include <applibs/gpio.h>
+#include "Sensors/GroveAD7992.h"
 
 typedef struct
 {

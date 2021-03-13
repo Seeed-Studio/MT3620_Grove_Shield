@@ -11,7 +11,7 @@ add_compile_options(-DUART_STRUCTS_VERSION=1)
 add_compile_options(-DSPI_STRUCTS_VERSION=1)
 
 # Libraries
-add_subdirectory("../../MT3620_Grove_Shield_Library" out)
+add_subdirectory(../../MT3620_Grove_Shield_Library lib/MT3620_Grove_Shield_Library)
 
 # Executable
 add_executable(${PROJECT_NAME} main.c)
