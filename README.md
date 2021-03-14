@@ -10,7 +10,7 @@ This is library for Azure Sphere MT3620 Grove Shield, the shield enhences Azure 
 
 ## Create a MT3620 application
 
-Review the [Azure Sphere documentation](https://docs.microsoft.com/en-au/azure-sphere/) for the guide to setting up the developer tools and Azure Sphere SDK on Windows 10 or Ubuntu 18.04.
+Review the [Azure Sphere documentation]https://docs.microsoft.com/en-au/azure-sphere/ for the guide to setting up the developer tools and Azure Sphere SDK on Windows 10 or Ubuntu 18.04.
 
 
 ## MT3620 Grove Shield App Manifest
