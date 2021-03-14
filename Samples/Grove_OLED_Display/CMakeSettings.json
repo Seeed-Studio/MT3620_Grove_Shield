@@ -1,9 +1,7 @@
-{
+﻿{
   "environments": [
     {
-      "environment": "AzureSphere",
-
-      "AzureSphereTargetApiSet": "3"
+      "environment": "AzureSphere"
     }
   ],
   "configurations": [
@@ -14,19 +12,15 @@
       "inheritEnvironments": [
         "AzureSphere"
       ],
-      "buildRoot": "${projectDir}\\out\\${name}-${env.AzureSphereTargetApiSet}",
-      "installRoot": "${projectDir}\\install\\${name}-${env.AzureSphereTargetApiSet}",
-      "cmakeCommandArgs": "--no-warn-unused-cli",
+      "buildRoot": "${projectDir}\\out\\${name}",
+      "installRoot": "${projectDir}\\out\\${name}",
+      "cmakeToolchain": "${env.AzureSphereDefaultSDKDir}CMakeFiles\\AzureSphereToolchain.cmake",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": "",
       "variables": [
         {
-          "name": "CMAKE_TOOLCHAIN_FILE",
-          "value": "${env.AzureSphereDefaultSDKDir}CMakeFiles\\AzureSphereToolchain.cmake"
-        },
-        {
           "name": "AZURE_SPHERE_TARGET_API_SET",
-          "value": "${env.AzureSphereTargetApiSet}"
+          "value": "latest-lts"
         }
       ]
     },
@@ -37,19 +31,15 @@
       "inheritEnvironments": [
         "AzureSphere"
       ],
-      "buildRoot": "${projectDir}\\out\\${name}-${env.AzureSphereTargetApiSet}",
-      "installRoot": "${projectDir}\\install\\${name}-${env.AzureSphereTargetApiSet}",
-      "cmakeCommandArgs": "--no-warn-unused-cli",
+      "buildRoot": "${projectDir}\\out\\${name}",
+      "installRoot": "${projectDir}\\out\\${name}",
+      "cmakeToolchain": "${env.AzureSphereDefaultSDKDir}CMakeFiles\\AzureSphereToolchain.cmake",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": "",
       "variables": [
         {
-          "name": "CMAKE_TOOLCHAIN_FILE",
-          "value": "${env.AzureSphereDefaultSDKDir}CMakeFiles\\AzureSphereToolchain.cmake"
-        },
-        {
           "name": "AZURE_SPHERE_TARGET_API_SET",
-          "value": "${env.AzureSphereTargetApiSet}"
+          "value": "latest-lts"
         }
       ]
     }
