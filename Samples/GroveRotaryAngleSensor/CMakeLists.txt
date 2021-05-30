@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(grove-4rotart-angle-sensor C)
 
-azsphere_configure_tools(TOOLS_REVISION "21.01")
-azsphere_configure_api(TARGET_API_SET "8")
+azsphere_configure_tools(TOOLS_REVISION "21.04")
+azsphere_configure_api(TARGET_API_SET "9")
 
 add_compile_options(-DNETWORKING_STRUCTS_VERSION=1)
 add_compile_options(-DWIFICONFIG_STRUCTS_VERSION=1)
